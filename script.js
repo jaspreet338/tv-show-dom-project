@@ -1,5 +1,22 @@
 //You can edit ALL of the code here
-let allEpisodes = []; // fetchAllEpisodes();
+let allEpisodes = [];
+
+function setup() {
+  let showList = [];
+  fetch("https://api.tvmaze.com/shows")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      showList = data;
+    })
+    .then(() => {
+      makePageForEpisodes(showList);
+      select(showList);
+      selectEpisode();
+    });
+  
+}
+
 function setup() {
   makePageForEpisodes(allEpisodes);
 
@@ -19,6 +36,28 @@ function setup() {
   selectEpisode.addEventListener("change", onEpisodeSelect);
 }
 
+
+
+function select(shows) {
+  let id;
+  const select = document.getElementById("showSelect");
+  shows.forEach((episode) => {
+    const option = document.createElement("option");
+    option.innerText = episode.name;
+    option.value = episode.id;
+    id = episode.id;
+    select.appendChild(option);
+  });
+  select.addEventListener("change", (event) => {
+    const selectedEpisode = shows.find(
+      (episode) => episode.id == event.target.value
+    );
+    const container = document.getElementById("episodes");
+    container.innerHTML = "";
+    makePageForEpisodes([selectedEpisode]);
+  });
+}
+ 
 function makePageForEpisodes(episodeList) {
   const rootElem = document.getElementById("root");
   rootElem.innerHTML = "";
@@ -90,6 +129,8 @@ function formatSeasonAndEp(season, episode) {
     episode < 10 ? `0${episode}` : episode
   }`;
 }
+
+
 
 window.onload = () => {
   fetch("https://api.tvmaze.com/shows/82/episodes").then((response) => {
