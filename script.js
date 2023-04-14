@@ -133,7 +133,7 @@ function formatSeasonAndEp(season, episode) {
 
 
 window.onload = () => {
-  fetch("https://api.tvmaze.com/shows/82/episodes").then((response) => {
+  fetch("https://api.tvmaze.com/shows").then((response) => {
     response.json().then((data) => {
       allEpisodes = data;
       debugger;

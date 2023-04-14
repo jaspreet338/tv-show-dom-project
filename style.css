@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 
 body { 
-  background-color: lightcyan;
+  background-color: rgb(155, 208, 208);
 }
 #root {
   color: black;
@@ -21,6 +21,8 @@ body {
   font-family: "Monoton", cursive;
   font-size: 100px;
   color: brown;
+  box-shadow: 0px 15px 15px 0px rgba(64, 55, 55, 0.685);
+  
 }
 
 .episode{
