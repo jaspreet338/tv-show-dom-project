@@ -221,12 +221,12 @@ function showLoad(listOfShow) {
     //like button
     const likeBtn = document.createElement("img");
     likeBtn.classList = "likeBtn";
-    likeBtn.src = "Images/heart.png";
+    likeBtn.src = "Images/Red-Heart.png";
     likeBtn.addEventListener("click", () => {
-      if (likeBtn.src.includes("Images/heart.png")) {
-        likeBtn.src = "Images/heart (1).png";
+      if (likeBtn.src.includes("Images/Red-Heart.png")) {
+        likeBtn.src = "Images/black-heart.png";
       } else {
-        likeBtn.src = "Images/heart.png";
+        likeBtn.src = "Images/Red-Heart.png";
       }
     });
 
@@ -308,12 +308,12 @@ function createEpisodeCards(listOfEpisodes) {
     //like button
     const likeBtn = document.createElement("img");
     likeBtn.classList = "likeBtn";
-    likeBtn.src = "Images/heart.png";
+    likeBtn.src = "Images/Red-Heart.png";
     likeBtn.addEventListener("click", () => {
-      if (likeBtn.src.includes("Images/heart.png")) {
-        likeBtn.src = "Images/heart (1).png";
+      if (likeBtn.src.includes("Images/Red-Heart.png")) {
+        likeBtn.src = "Images/black-heart.png";
       } else {
-        likeBtn.src = "Images/heart.png";
+        likeBtn.src = "Images/Red-Heart.png";
       }
     });
 

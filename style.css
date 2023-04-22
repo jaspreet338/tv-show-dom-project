@@ -6,8 +6,9 @@
 --Royalblue: #3f3f3e;
 --white: #e3e3e3;
 --darkGrey: #1c1c1c;
---fyellow: #fcad00;
+--fyellow: #f7bf0a;
 --another: #00ffd5;
+--maroon: #800000;
 }
 /* Main  */
 body{
@@ -43,10 +44,10 @@ header{
     color: var(--white);
 }
 #logo-one-split{
-    color: var(--fyellow);
+    color: var(--maroon);
 }
 #logo-two-split{
-    color: var(--fyellow);
+    color: var(--maroon);
 }
 .colorMode {
     padding: 5px 5px 5px 5px; 
@@ -57,7 +58,7 @@ header{
     background-color: var(--white);
     color: var(--Royalblue);  
     border-radius: 5px;
-    border-left: 10px solid var(--fyellow);
+    border-left: 10px solid var(--maroon);
     cursor: pointer;
 }
 /* Movie Card */
@@ -91,7 +92,7 @@ li:hover {
     transition: 0.5s;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    border-left: 8px solid var(--fyellow);
+    border-left: 8px solid var(--maroon);
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 .epi-format{
@@ -152,8 +153,8 @@ padding-bottom: 5px;
     }
 /* Footer */
 footer{
-    background-color: var(--fyellow);
-    color: var(--darkGrey);
+    background-color: var(--maroon);
+    color: black;
     display: flex;
     justify-content: center;
 }
